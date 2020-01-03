@@ -31,4 +31,15 @@ print("Hello %s!" % name)
 
 word = choice(words)
 
-print("there are %s letters in the word" % str(len(word)))
+
+def draw_word():
+    secret = ''
+    length = len(word)
+    secret = secret.join(' _ ' for x in range(length))
+
+    print(secret)
+
+
+draw_word()
+
+#print("there are %s letters in the word" % str(len(word)))

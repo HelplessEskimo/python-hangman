@@ -96,6 +96,11 @@ def game():
         print("you lose, the word was %s" % word)
 
 
-game()
-print("\n")
+playing = True
+
+while playing is True:
+    game()
+    again = input("\ndo you want to play again? (yes/no):")
+    if again == "no":
+        playing = False
 # print("there are %s letters in the word" % str(len(word)))

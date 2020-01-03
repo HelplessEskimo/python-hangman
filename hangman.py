@@ -28,3 +28,5 @@ words = [
 name = input("What is you name?\n> ")
 
 print("Hello %s!" % name)
+
+word = choice(words)

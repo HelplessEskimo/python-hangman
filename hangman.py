@@ -80,15 +80,18 @@ def game():
             break
         else:
             char = input("\n")
-            index = check_word(char, word, secret)
-            if index == "wrong":
-                lives -= 1
-                new_secret = secret
-            else:
-                new_secret = draw_word(secret, length, True, index, char)
+            if len(char) == 1:
+                index = check_word(char, word, secret)
+                if index == "wrong":
+                    lives -= 1
+                    new_secret = secret
+                else:
+                    new_secret = draw_word(secret, length, True, index, char)
 
-            secret = new_secret
-            print(secret, end="\r", flush=True)
+                secret = new_secret
+                print(secret, end="\r", flush=True)
+            else:
+                print("only enter a single letter")
     if lives == 0:
         print("you lose, the word was %s" % word)
 
